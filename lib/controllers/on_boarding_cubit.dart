@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
 import '../data/local/cache_helper.dart';
 import '../data/static/lists.dart';
 import '../presentation/screens/enter_data/enter_data_screen.dart';
@@ -11,8 +10,15 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
   PageController controller = PageController();
   int currentIndex = 0;
 
+  //
   static OnBoardingCubit get(BuildContext context) {
     return BlocProvider.of(context);
+  }
+
+  //on page changed
+  onPageChanged(int value){
+    currentIndex = value;
+    emit(ChangePageState());
   }
 
   // Skip function

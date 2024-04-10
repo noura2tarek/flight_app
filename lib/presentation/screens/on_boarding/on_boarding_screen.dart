@@ -5,6 +5,7 @@ import 'package:flight_app/presentation/core/resources/color_manager.dart';
 import 'package:flight_app/presentation/res_widgets/custom_button.dart';
 import 'package:flight_app/presentation/screens/on_boarding/widgets/page_view_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../data/static/lists.dart';
@@ -21,6 +22,11 @@ class OnBoardingScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0.0,
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarIconBrightness: Brightness.light,
+            statusBarColor: Colors.white,
+            statusBarBrightness: Brightness.light,
+          ),
         ),
         body: BlocConsumer<OnBoardingCubit, OnBoardingState>(
           listener: (context, state) {},
@@ -40,7 +46,7 @@ class OnBoardingScreen extends StatelessWidget {
                       );
                     },
                     onPageChanged: (value) {
-                      cubit.currentIndex = value;
+                      cubit.onPageChanged(value);
                     },
                   ),
                 ),
