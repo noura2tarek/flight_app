@@ -1,20 +1,23 @@
-import 'package:flight_app/presentation/core/managers/strings.dart';
+import 'package:flight_app/presentation/core/managers/app_strings.dart';
 import 'package:flight_app/presentation/res_widgets/custom_button.dart';
 import 'package:flight_app/presentation/screens/verify_code/verify_code_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:scroll_date_picker/scroll_date_picker.dart';
+import '../../../data/local/cache_helper.dart';
 import '../../core/managers/values.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/styles_manager.dart';
 
-class SelectDateScreen extends StatefulWidget {
-  const SelectDateScreen({Key? key}) : super(key: key);
+//make it with cubit
+class SelectBirthDateScreen extends StatefulWidget {
+  const SelectBirthDateScreen({Key? key}) : super(key: key);
 
   @override
-  State<SelectDateScreen> createState() => _SelectDateScreenState();
+  State<SelectBirthDateScreen> createState() => _SelectBirthDateScreenState();
 }
 
-class _SelectDateScreenState extends State<SelectDateScreen> {
+class _SelectBirthDateScreenState extends State<SelectBirthDateScreen> {
   DateTime _selectedDate = DateTime.now();
 
   @override
@@ -23,6 +26,11 @@ class _SelectDateScreenState extends State<SelectDateScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarIconBrightness: Brightness.dark,
+          statusBarColor: Colors.white,
+          statusBarBrightness: Brightness.dark,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(padding),
@@ -50,34 +58,12 @@ class _SelectDateScreenState extends State<SelectDateScreen> {
                 ],
               ),
             ),
-            /* ------------ Date Picker ------------- */
+
             Text(
               '$_selectedDate',
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 100.0),
-            //   child: ScrollWheelDatePicker(
-            //     onSelectedItemChanged: (value) {
-            //       setState(() {
-            //         _selectedDate = value;
-            //       });
-            //     },
-            //     loopDays: true,
-            //     loopMonths: true,
-            //     loopYears: true,
-            //     initialDate: _selectedDate,
-            //     theme: FlatDatePickerTheme(
-            //       wheelPickerHeight: 240.0,
-            //       monthFormat: MonthFormat.full,
-            //       overlay: ScrollWheelDatePickerOverlay.highlight,
-            //       itemTextStyle: defaultItemTextStyle.copyWith(color: AppColors.primaryColor.withOpacity(0.6)),
-            //       overlayColor: AppColors.overlayDateColor,
-            //       overAndUnderCenterOpacity: 0.2,
-            //       backgroundColor: Colors.white,
-            //     ),
-            //   ),
-            // ),
+            /* ------------Scroll Date Picker ------------- */
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 100.0),
               child: SizedBox(
@@ -106,6 +92,7 @@ class _SelectDateScreenState extends State<SelectDateScreen> {
             CustomButton(
               text: AppStrings.next,
               function: () {
+                CacheHelper.savaData(key: 'passBirthDate', value: true);
                 Navigator.push(
                   context,
                   MaterialPageRoute(

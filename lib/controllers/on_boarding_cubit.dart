@@ -26,7 +26,7 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
     CacheHelper.savaData(key: 'skipBoarding', value: true);
     Navigator.pushAndRemoveUntil(context, MaterialPageRoute(
       builder: (context) {
-        return const EnterData();
+        return  EnterData();
       },
     ), (route) => false);
     emit(OnBoardingSkipState());

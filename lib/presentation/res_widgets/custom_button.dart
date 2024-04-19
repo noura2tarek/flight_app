@@ -20,7 +20,11 @@ class CustomButton extends StatelessWidget {
         onPressed: function,
         child:  Text(
           text,
-          style: const TextStyle(color: Colors.white),
+          style: const TextStyle(
+            color: Colors.white,
+            fontFamily: 'Inter',
+            fontSize: 16.0,
+          ),
         ),
       ),
     );

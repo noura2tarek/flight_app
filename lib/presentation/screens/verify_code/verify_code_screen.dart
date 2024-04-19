@@ -1,11 +1,14 @@
-import 'package:flight_app/presentation/core/managers/strings.dart';
+import 'package:flight_app/presentation/core/managers/app_strings.dart';
 import 'package:flight_app/presentation/core/managers/values.dart';
 import 'package:flight_app/presentation/res_widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import '../../../data/local/cache_helper.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/styles_manager.dart';
+import '../main_page/screens/main_page_screen.dart';
 
+// make it with cubit
 class VerifyCode extends StatelessWidget {
   const VerifyCode({Key? key}) : super(key: key);
 
@@ -25,7 +28,7 @@ class VerifyCode extends StatelessWidget {
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: 'Enter the',
+                    text: AppStrings.enterThe,
                     style: myTextStyle(
                       color: AppColors.textColor,
                       size: 30.0,
@@ -63,9 +66,7 @@ class VerifyCode extends StatelessWidget {
                   //handle validation or checks here
                 },
                 //runs when every text field is filled
-                onSubmit: (String verificationCode) {
-                  //controller.goToResetPassword();
-                }, // end onSubmit
+                onSubmit: (String verificationCode) {}, // end onSubmit
               ),
             ),
             const SizedBox(
@@ -74,7 +75,15 @@ class VerifyCode extends StatelessWidget {
             /* ----------- Next Button ------------ */
             CustomButton(
               text: AppStrings.next,
-              function: () {},
+              function: () {
+                CacheHelper.savaData(key: 'passVerifyCode', value: true);
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MainPageScreen(),
+                    ),
+                    (route) => false);
+              },
             ),
           ],
         ),

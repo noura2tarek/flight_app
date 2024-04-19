@@ -1,10 +1,9 @@
 import 'dart:async';
-import 'package:flight_app/presentation/core/managers/images.dart';
+import 'package:flight_app/presentation/core/managers/app_images.dart';
 import 'package:flight_app/presentation/core/resources/color_manager.dart';
-import 'package:flight_app/presentation/screens/on_boarding/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../home/home_screen.dart';
+import '../on_boarding/on_boarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
