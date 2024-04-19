@@ -141,81 +141,77 @@ class _ExploreScreenState extends State<ExploreScreen> {
           /* --------- Third Card --------- */
           SizedBox(
             height: 56.0,
-            child: InkWell(
-              onTap: () {
-                //show bottom sheet of search
-              },
-              child: Card(
-                margin: EdgeInsets.zero,
-                surfaceTintColor: Colors.white,
-                color: Colors.white,
-                elevation: 6.0,
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.zero),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Row(
-                    children: [
-                      Image.asset(AppImages.smileIcon),
-                      const SizedBox(
-                        width: 10.0,
+            child: Card(
+              margin: EdgeInsets.zero,
+              surfaceTintColor: Colors.white,
+              color: Colors.white,
+              elevation: 6.0,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.zero,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Row(
+                  children: [
+                    Image.asset(AppImages.smileIcon),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    const Text(
+                      'Passengers',
+                      style: TextStyle(
+                        color: Color(0xff1D2939),
+                        fontFamily: 'Inter',
+                        fontSize: 16.0,
                       ),
-                      const Text(
-                        'Passengers',
-                        style: TextStyle(
-                          color: Color(0xff1D2939),
-                          fontFamily: 'Inter',
-                          fontSize: 16.0,
+                    ),
+                    const Spacer(),
+                    // plus and minns button
+                    Row(
+                      children: [
+                        Container(
+                          color: Color(0xffF2F4F7),
+                          height: 28.0,
+                          width: 28.0,
+                          child: InkWell(
+                            splashColor: Colors.grey,
+                            onTap: () {
+                              setState(() {
+                                passengersCount--;
+                              });
+                            },
+                            child: Icon(Icons.minimize_outlined),
+                          ),
                         ),
-                      ),
-                      const Spacer(),
-                      // plus and minns button
-                      Row(
-                        children: [
-                          Container(
-                            color: Color(0xffF2F4F7),
-                            height: 28.0,
-                            width: 28.0,
-                            child: InkWell(
-                              splashColor: Colors.grey,
-                              onTap: () {
-                                setState(() {
-                                  passengersCount--;
-                                });
-                              },
-                              child: Icon(Icons.minimize_outlined),
+                        Padding(
+                          padding:
+                              const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Text(
+                            '$passengersCount',
+                            style: const TextStyle(
+                              color: Color(0xff1D2939),
+                              fontFamily: 'Inter',
+                              fontSize: 24.0,
                             ),
                           ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Text(
-                              '$passengersCount',
-                              style: const TextStyle(
-                                color: Color(0xff1D2939),
-                                fontFamily: 'Inter',
-                                fontSize: 24.0,
-                              ),
-                            ),
+                        ),
+                        Container(
+                          color: Color(0xffF2F4F7),
+                          height: 28.0,
+                          width: 28.0,
+                          child: InkWell(
+                            splashColor: Colors.grey,
+                            onTap: () {
+                              setState(() {
+                                passengersCount++;
+                              });
+                            },
+                            child: Icon(Icons.add),
                           ),
-                          Container(
-                            color: Color(0xffF2F4F7),
-                            height: 28.0,
-                            width: 28.0,
-                            child: InkWell(
-                              splashColor: Colors.grey,
-                              onTap: () {
-                                setState(() {
-                                  passengersCount++;
-                                });
-                              },
-                              child: Icon(Icons.add),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -231,11 +227,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
           const SizedBox(
             height: 16.0,
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 24.0),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 24.0),
             child: Text(
-              'Helpful information',
-              style: TextStyle(
+              AppStrings.helpfulInformation,
+              style: const TextStyle(
                 color: Color(0xff1D2939),
                 fontFamily: 'Inter',
                 fontWeight: FontWeight.bold,
@@ -251,7 +247,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
               itemBuilder: (context, index) {
                 return Container(
                   height: 136.0,
-                  width: 112.0,
+                  width: 114.0,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: const BorderRadius.all(Radius.circular(10.0)),
@@ -259,10 +255,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   ),
                   child: Container(
                     height: 135.0,
-                    width: 111.0,
+                    width: 124.0,
+                    alignment: Alignment.center,
                     decoration: const BoxDecoration(
-                      borderRadius:
-                          BorderRadius.all(Radius.circular(10.0)),
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     ),
                     child: Stack(
                       alignment: Alignment.topCenter,

@@ -14,6 +14,7 @@ class AppStrings{
   static String lastName =  '\nlast name ';
   static String phoneNumber = ' phone \nnumber';
   static String findTour = 'Find tour';
+  static String helpfulInformation = 'Helpful information';
   static String getStarted = 'Get Started';
   static String enterFirstName = 'enter your first name';
   static String enterLastName = 'enter your last name';

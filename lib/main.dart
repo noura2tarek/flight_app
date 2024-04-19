@@ -3,6 +3,7 @@ import 'package:flight_app/presentation/core/managers/app_strings.dart';
 import 'package:flight_app/presentation/core/resources/theme_manager.dart';
 import 'package:flight_app/presentation/screens/enter_data/enter_data_screen.dart';
 import 'package:flight_app/presentation/screens/main_page/screens/main_page_screen.dart';
+import 'package:flight_app/presentation/screens/payment/success_payment.dart';
 import 'package:flight_app/presentation/screens/splash/splash_screen.dart';
 import 'package:flight_app/presentation/screens/verify_code/verify_code_screen.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
       title: AppStrings.appTitle,
       debugShowCheckedModeBanner: false,
       theme: theme,
-      home: initial,
+      home: SuccessPaymentScreen(),
     );
   }
 }
