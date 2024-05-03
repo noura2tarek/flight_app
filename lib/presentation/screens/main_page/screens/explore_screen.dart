@@ -17,7 +17,7 @@ class ExploreScreen extends StatefulWidget {
 
 class _ExploreScreenState extends State<ExploreScreen> {
   int passengersCount = 1;
-  String? date;
+  String? date = DateFormat.yMMMd().format(DateTime.now());
 
   TextEditingController searchController = TextEditingController();
   List<String> images = [

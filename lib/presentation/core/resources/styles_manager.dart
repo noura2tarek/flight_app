@@ -23,6 +23,29 @@ TextStyle interSemiBold14 = const TextStyle(
   fontFamily: 'Inter',
 );
 
+//inter semi bold 24
+TextStyle interSemiBold24 = const TextStyle(
+  fontWeight: FontWeight.w600,
+  color: Colors.black,
+  fontSize: 24.0,
+  fontFamily: 'Inter',
+);
+//inter medium 14
+TextStyle interMedium14 = const TextStyle(
+  fontWeight: FontWeight.w500,
+  color: Color(0xff667085),
+  fontSize: 14.0,
+  fontFamily: 'Inter',
+);
+//inter regular 14
+TextStyle interRegular14 = const TextStyle(
+  fontWeight: FontWeight.w400,
+  color: Color(0xff1D2939),
+  fontSize: 14.0,
+  fontFamily: 'Inter',
+);
+
+
 //padding 20
 //button height 50
 //border radius 8
