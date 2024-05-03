@@ -3,9 +3,9 @@ class AppStrings{
   static String title1 = 'Ready to travel';
   static String content1 = 'Easy App for your next flight.';
   static String title2 = 'Go Explore!';
-  static String findYourDes = 'Find your destination, pick your ticket with the best price.';
+  static String findYourDes = 'Find your destination!';
   static String title3 = 'Enjoy your Flight';
-  static String content3 = 'Have a safe journey in your holiday.';
+  static String content3 = 'Have a safe journey.';
   static String skip = 'Skip';
   static String next = 'Next';
   static String enter = 'Enter';
@@ -22,4 +22,5 @@ class AppStrings{
   static String setBag = 'Set Your bag and baggage';
   static String fly = 'Fly beyond the limit';
   static String prepare = 'Set your bag for your flight.';
+  static String whereFindAirplaneTour = 'Where to find an airplane tour?';
 }
