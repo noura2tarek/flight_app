@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 //inter bold style 25
-TextStyle myTextStyle(
-    {required var color,
-    double size = 17.0,
-    FontWeight fontWeight = FontWeight.bold}) {
+TextStyle myTextStyle({
+  required var color,
+  double size = 17.0,
+  FontWeight fontWeight = FontWeight.bold,
+}) {
   return TextStyle(
     fontWeight: fontWeight,
     color: color,
@@ -30,6 +31,7 @@ TextStyle interSemiBold24 = const TextStyle(
   fontSize: 24.0,
   fontFamily: 'Inter',
 );
+
 //inter medium 14
 TextStyle interMedium14 = const TextStyle(
   fontWeight: FontWeight.w500,
@@ -37,6 +39,7 @@ TextStyle interMedium14 = const TextStyle(
   fontSize: 14.0,
   fontFamily: 'Inter',
 );
+
 //inter regular 14
 TextStyle interRegular14 = const TextStyle(
   fontWeight: FontWeight.w400,
@@ -44,7 +47,6 @@ TextStyle interRegular14 = const TextStyle(
   fontSize: 14.0,
   fontFamily: 'Inter',
 );
-
 
 //padding 20
 //button height 50
