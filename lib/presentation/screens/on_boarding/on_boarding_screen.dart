@@ -1,7 +1,7 @@
-import 'package:flight_app/data/static/lists.dart';
 import 'package:flutter/material.dart';
 import 'package:intro_screen_onboarding_flutter/intro_app.dart';
-import '../../../data/local/cache_helper.dart';
+import '../../../data/data_source/local/cache_helper.dart';
+import '../../../data/data_source/static/lists.dart';
 import '../enter_data/enter_data_screen.dart';
 
 class OnBoardingScreen extends StatelessWidget {

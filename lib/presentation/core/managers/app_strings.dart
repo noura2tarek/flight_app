@@ -1,4 +1,4 @@
-class AppStrings{
+class AppStringsEn{
   static String appTitle = 'Flight App';
   static String title1 = 'Ready to travel';
   static String content1 = 'Easy App for your next flight.';
@@ -23,4 +23,5 @@ class AppStrings{
   static String fly = 'Fly beyond the limit';
   static String prepare = 'Set your bag for your flight.';
   static String whereFindAirplaneTour = 'Where to find an airplane tour?';
+  static String inCaseOfCancellation = 'In case of flight cancellation the money will be refunded';
 }

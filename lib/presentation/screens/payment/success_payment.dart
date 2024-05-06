@@ -1,4 +1,5 @@
 import 'package:flight_app/presentation/core/managers/app_images.dart';
+import 'package:flight_app/presentation/core/managers/app_strings.dart';
 import 'package:flight_app/presentation/core/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -41,12 +42,12 @@ class SuccessPaymentScreen extends StatelessWidget {
             const SizedBox(
               height: 12.0,
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.0),
+             Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Text(
-                'In case of flight cancellation the money will be refunded',
+                AppStringsEn.inCaseOfCancellation,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xffF2F2F7),
                   fontFamily: 'Inter',
                   fontSize: 16.0,
@@ -72,7 +73,7 @@ class SuccessPaymentScreen extends StatelessWidget {
                     'Perfect',
                     style: TextStyle(
                       color: AppColors.primaryColor,
-                      shadows: [
+                      shadows: const [
                         Shadow(color: Colors.grey),
                         Shadow(color: Colors.grey),
                         Shadow(color: Colors.grey),

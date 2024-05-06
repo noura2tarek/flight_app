@@ -1,11 +1,14 @@
-import 'package:flight_app/data/local/cache_helper.dart';
 import 'package:flight_app/presentation/core/managers/app_strings.dart';
+import 'package:flight_app/presentation/core/resources/routes_manager.dart';
 import 'package:flight_app/presentation/core/resources/theme_manager.dart';
 import 'package:flight_app/presentation/screens/enter_data/enter_data_screen.dart';
 import 'package:flight_app/presentation/screens/main_page/screens/main_page_screen.dart';
+import 'package:flight_app/presentation/screens/payment/checkout_screen.dart';
 import 'package:flight_app/presentation/screens/splash/splash_screen.dart';
 import 'package:flight_app/presentation/screens/verify_code/verify_code_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'data/data_source/local/cache_helper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +23,7 @@ void main() async {
         if(passVerifyCode != null){
           initialScreen = MainPageScreen();
         } else {
-          initialScreen = VerifyCode();
+          initialScreen = VerifyCodeScreen();
         }
     } else{
       initialScreen = EnterData();
@@ -40,10 +43,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: AppStrings.appTitle,
+      title: AppStringsEn.appTitle,
       debugShowCheckedModeBanner: false,
       theme: theme,
-      home: MainPageScreen(),
+      //initialRoute: AppRoutes.splashRoute,
+      home: PaymentScreen(),
+      routes: routes,
     );
   }
 }

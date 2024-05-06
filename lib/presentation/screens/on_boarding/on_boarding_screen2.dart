@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../../../data/static/lists.dart';
+import '../../../data/data_source/static/lists.dart';
 
 class OnBoardingScreen2 extends StatelessWidget {
   const OnBoardingScreen2({Key? key}) : super(key: key);
@@ -73,7 +73,7 @@ class OnBoardingScreen2 extends StatelessWidget {
                   condition: cubit.currentIndex == 2,
                   builder: (context) => CustomButton(
                     margin: 20.0,
-                    text: AppStrings.getStarted,
+                    text: AppStringsEn.getStarted,
                     function: () {
                       cubit.skip(context: context);
                     },
@@ -87,7 +87,7 @@ class OnBoardingScreen2 extends StatelessWidget {
                             cubit.skip(context: context);
                           },
                           child: Text(
-                            AppStrings.skip,
+                            AppStringsEn.skip,
                             style: const TextStyle(
                               color: Colors.black,
                               fontSize: 16.0,

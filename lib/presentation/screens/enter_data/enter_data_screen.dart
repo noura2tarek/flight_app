@@ -1,4 +1,3 @@
-import 'package:flight_app/data/local/cache_helper.dart';
 import 'package:flight_app/presentation/core/managers/app_strings.dart';
 import 'package:flight_app/presentation/core/managers/values.dart';
 import 'package:flight_app/presentation/core/resources/color_manager.dart';
@@ -8,6 +7,7 @@ import 'package:flight_app/presentation/screens/enter_data/select_bitrh_date.dar
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 //import 'package:phone_form_field/phone_form_field.dart';
+import '../../../data/data_source/local/cache_helper.dart';
 import '../../core/resources/styles_manager.dart';
 
 //make it with cubit
@@ -43,13 +43,13 @@ class EnterData extends StatelessWidget {
                   ),
                   children: [
                     TextSpan(
-                      text: AppStrings.enter,
+                      text: AppStringsEn.enter,
                       style: myTextStyle(
                         color: AppColors.textColor,
                       ),
                     ),
                     TextSpan(
-                      text: AppStrings.phoneNumber,
+                      text: AppStringsEn.phoneNumber,
                       style: myTextStyle(
                         color: AppColors.primaryColor,
                       ),
@@ -116,13 +116,13 @@ class EnterData extends StatelessWidget {
                   ),
                   children: [
                     TextSpan(
-                      text: AppStrings.enter,
+                      text: AppStringsEn.enter,
                       style: myTextStyle(
                         color: AppColors.textColor,
                       ),
                     ),
                     TextSpan(
-                      text:AppStrings.first,
+                      text:AppStringsEn.first,
                       style: myTextStyle(
                         color: AppColors.primaryColor,
                       ),
@@ -134,7 +134,7 @@ class EnterData extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text: AppStrings.lastName,
+                      text: AppStringsEn.lastName,
                       style: myTextStyle(
                         color: AppColors.primaryColor,
                       ),
@@ -148,7 +148,7 @@ class EnterData extends StatelessWidget {
               //first name text form
               CustomTextForm(
                 controller: firstNameController,
-                hintText: AppStrings.enterFirstName,
+                hintText: AppStringsEn.enterFirstName,
                 type: TextInputType.name,
               ),
               const SizedBox(
@@ -157,7 +157,7 @@ class EnterData extends StatelessWidget {
               //last name text form
               CustomTextForm(
                 controller: lastNameController,
-                hintText: AppStrings.enterLastName,
+                hintText: AppStringsEn.enterLastName,
                 type: TextInputType.name,
               ),
               const SizedBox(
@@ -165,7 +165,7 @@ class EnterData extends StatelessWidget {
               ),
               //next button
               CustomButton(
-                text: AppStrings.next,
+                text: AppStringsEn.next,
                 function: () {
                   CacheHelper.savaData(key: 'passEnterDate', value: true);
                   Navigator.push(

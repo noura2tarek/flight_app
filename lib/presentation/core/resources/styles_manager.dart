@@ -40,6 +40,16 @@ TextStyle interMedium14 = const TextStyle(
   fontFamily: 'Inter',
 );
 
+//inter semi bold 17
+TextStyle interSemiBold16({required var color}) {
+  return TextStyle(
+    fontWeight: FontWeight.w600,
+    color: color,
+    fontSize: 17.0,
+    fontFamily: 'Inter',
+  );
+}
+
 //inter regular 14
 TextStyle interRegular14 = const TextStyle(
   fontWeight: FontWeight.w400,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../controllers/main_page_controller/main_page_controller_cubit.dart';
-import '../../../../data/static/lists.dart';
+import '../../../../data/data_source/static/lists.dart';
 import '../../../core/managers/app_images.dart';
 import '../../../core/resources/color_manager.dart';
 

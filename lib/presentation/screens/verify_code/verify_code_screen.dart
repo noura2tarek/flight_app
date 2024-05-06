@@ -3,14 +3,14 @@ import 'package:flight_app/presentation/core/managers/values.dart';
 import 'package:flight_app/presentation/res_widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
-import '../../../data/local/cache_helper.dart';
+import '../../../data/data_source/local/cache_helper.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/styles_manager.dart';
 import '../main_page/screens/main_page_screen.dart';
 
 // make it with cubit
-class VerifyCode extends StatelessWidget {
-  const VerifyCode({Key? key}) : super(key: key);
+class VerifyCodeScreen extends StatelessWidget {
+  const VerifyCodeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class VerifyCode extends StatelessWidget {
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: AppStrings.enterThe,
+                    text: AppStringsEn.enterThe,
                     style: myTextStyle(
                       color: AppColors.textColor,
                       size: 30.0,
@@ -74,7 +74,7 @@ class VerifyCode extends StatelessWidget {
             ),
             /* ----------- Next Button ------------ */
             CustomButton(
-              text: AppStrings.next,
+              text: AppStringsEn.next,
               function: () {
                 CacheHelper.savaData(key: 'passVerifyCode', value: true);
                 Navigator.pushAndRemoveUntil(

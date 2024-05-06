@@ -98,7 +98,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                               keyboardType: TextInputType.name,
                               controller: searchController,
                               decoration: InputDecoration(
-                                hintText: AppStrings.whereFindAirplaneTour,
+                                hintText: AppStringsEn.whereFindAirplaneTour,
                                 hintStyle: const TextStyle(
                                   color: Colors.grey,
                                   fontWeight: FontWeight.normal,
@@ -174,7 +174,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                         width: 10.0,
                       ),
                       Text(
-                        AppStrings.whereFindAirplaneTour,
+                        AppStringsEn.whereFindAirplaneTour,
                         style: const TextStyle(
                           color: Color(0xff98A2B3),
                           fontFamily: 'Inter',
@@ -324,7 +324,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
           ),
           /* --------- Find tour button --------- */
           CustomButton(
-            text: AppStrings.findTour,
+            text: AppStringsEn.findTour,
             function: () {},
           ),
           const SizedBox(
@@ -333,7 +333,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 24.0),
             child: Text(
-              AppStrings.helpfulInformation,
+              AppStringsEn.helpfulInformation,
               style: const TextStyle(
                 color: Color(0xff1D2939),
                 fontFamily: 'Inter',

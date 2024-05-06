@@ -4,7 +4,7 @@ import 'package:flight_app/presentation/screens/verify_code/verify_code_screen.d
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:scroll_date_picker/scroll_date_picker.dart';
-import '../../../data/local/cache_helper.dart';
+import '../../../data/data_source/local/cache_helper.dart';
 import '../../core/managers/values.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/styles_manager.dart';
@@ -90,14 +90,14 @@ class _SelectBirthDateScreenState extends State<SelectBirthDateScreen> {
 
             /* ------------ Next Button ------------- */
             CustomButton(
-              text: AppStrings.next,
+              text: AppStringsEn.next,
               function: () {
                 CacheHelper.savaData(key: 'passBirthDate', value: true);
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const VerifyCode();
+                      return const VerifyCodeScreen();
                     },
                   ),
                 );
