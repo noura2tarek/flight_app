@@ -1,3 +1,4 @@
+import 'package:flight_app/presentation/core/managers/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../controllers/profile_screen_controller/profile_screen_cubit.dart';
@@ -61,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.asset(
-                                  'assets/images/defaultPhoto.jpg',
+                                  AppImages.defaultPhoto,
                                   filterQuality: FilterQuality.high,
                                   fit: BoxFit.cover,
                                 ),

@@ -16,5 +16,6 @@ class AppImages{
   static var water = 'assets/images/water.png';
   static var food = 'assets/images/food.png';
   static var successPayment = 'assets/images/success.png';
+  static var defaultPhoto = 'assets/images/defaultPhoto.jpg';
 
 }
