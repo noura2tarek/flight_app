@@ -1,5 +1,5 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import 'package:flight_app/controllers/on_boarding_cubit.dart';
+import 'package:flight_app/controllers/on_boarding_controller/on_boarding_cubit.dart';
 import 'package:flight_app/presentation/core/managers/app_strings.dart';
 import 'package:flight_app/presentation/core/resources/color_manager.dart';
 import 'package:flight_app/presentation/res_widgets/custom_button.dart';

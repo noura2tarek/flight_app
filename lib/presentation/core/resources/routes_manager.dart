@@ -5,9 +5,9 @@ import 'package:flight_app/presentation/screens/on_boarding/on_boarding_screen.d
 import 'package:flight_app/presentation/screens/payment/success_payment.dart';
 import 'package:flight_app/presentation/screens/verify_code/verify_code_screen.dart';
 import 'package:flutter/material.dart';
-
 import '../../screens/payment/checkout_screen.dart';
 
+//routes names class
 class AppRoutes{
   //splash
   //static const String splashRoute = '/';

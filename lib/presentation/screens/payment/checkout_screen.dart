@@ -24,7 +24,7 @@ class PaymentScreen extends StatelessWidget {
           centerTitle: true,
           title: Text(
             'Payment',
-            style: interSemiBold16(color: const Color(0xff1d2939)),
+            style: interSemiBold17(color: const Color(0xff1d2939)),
           ),
         ),
         body: SingleChildScrollView(

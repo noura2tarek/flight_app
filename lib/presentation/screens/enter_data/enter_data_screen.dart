@@ -3,11 +3,11 @@ import 'package:flight_app/presentation/core/managers/values.dart';
 import 'package:flight_app/presentation/core/resources/color_manager.dart';
 import 'package:flight_app/presentation/res_widgets/custom_button.dart';
 import 'package:flight_app/presentation/screens/enter_data/widgets/custom_text_form.dart';
-import 'package:flight_app/presentation/screens/enter_data/select_bitrh_date.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 //import 'package:phone_form_field/phone_form_field.dart';
 import '../../../data/data_source/local/cache_helper.dart';
+import '../../core/resources/routes_manager.dart';
 import '../../core/resources/styles_manager.dart';
 
 //make it with cubit
@@ -122,7 +122,7 @@ class EnterData extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text:AppStringsEn.first,
+                      text: AppStringsEn.first,
                       style: myTextStyle(
                         color: AppColors.primaryColor,
                       ),
@@ -168,14 +168,7 @@ class EnterData extends StatelessWidget {
                 text: AppStringsEn.next,
                 function: () {
                   CacheHelper.savaData(key: 'passEnterDate', value: true);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return SelectBirthDateScreen();
-                      },
-                    ),
-                  );
+                  Navigator.pushNamed(context, AppRoutes.enterBirthDateRoute);
                 },
               ),
             ],

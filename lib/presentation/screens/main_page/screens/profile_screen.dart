@@ -1,10 +1,11 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../controllers/profile_screen_controller/profile_screen_cubit.dart';
 import '../../../core/resources/color_manager.dart';
+import '../../../core/resources/routes_manager.dart';
 import '../../../core/resources/styles_manager.dart';
 
+//make it with cubit
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
@@ -59,13 +60,8 @@ class ProfileScreen extends StatelessWidget {
                                 decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
-                                child: CachedNetworkImage(
-                                  imageUrl:
-                                      'https://www.vecteezy.com/vector-art/9734564-default-avatar-profile-icon-of-social-media-user',
-                                  placeholder: (context, url) =>
-                                      Container(color: Colors.grey[300]),
-                                  errorWidget: (context, url, error) =>
-                                      const Icon(Icons.error),
+                                child: Image.asset(
+                                  'assets/images/defaultPhoto.jpg',
                                   filterQuality: FilterQuality.high,
                                   fit: BoxFit.cover,
                                 ),
@@ -169,7 +165,10 @@ class ProfileScreen extends StatelessWidget {
                                    /* ---------- cards list tile  ---------- */
                                    ListTile(
                                      splashColor: Colors.white70,
-                                     onTap: () {},
+                                     onTap: () {
+                                       //payment
+                                       Navigator.pushNamed(context, AppRoutes.checkOutRoute);
+                                     },
                                      tileColor: const Color(0xfff2f2f7).withOpacity(0.5),
                                      shape: const OutlineInputBorder(
                                        borderSide: BorderSide(color: Colors.white, style: BorderStyle.none,),

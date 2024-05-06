@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../data/data_source/local/cache_helper.dart';
-import '../data/data_source/static/lists.dart';
-import '../presentation/screens/enter_data/enter_data_screen.dart';
+import '../../data/data_source/local/cache_helper.dart';
+import '../../data/data_source/static/lists.dart';
+import '../../presentation/screens/enter_data/enter_data_screen.dart';
 part 'on_boarding_state.dart';
 
 class OnBoardingCubit extends Cubit<OnBoardingState> {

@@ -1,6 +1,6 @@
 import 'package:flight_app/presentation/core/managers/app_strings.dart';
+import 'package:flight_app/presentation/core/resources/routes_manager.dart';
 import 'package:flight_app/presentation/res_widgets/custom_button.dart';
-import 'package:flight_app/presentation/screens/verify_code/verify_code_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:scroll_date_picker/scroll_date_picker.dart';
@@ -93,14 +93,7 @@ class _SelectBirthDateScreenState extends State<SelectBirthDateScreen> {
               text: AppStringsEn.next,
               function: () {
                 CacheHelper.savaData(key: 'passBirthDate', value: true);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const VerifyCodeScreen();
-                    },
-                  ),
-                );
+              Navigator.pushNamed(context, AppRoutes.verifyCodeRoute);
               },
             ),
           ],

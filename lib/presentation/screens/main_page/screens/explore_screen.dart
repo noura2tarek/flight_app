@@ -68,6 +68,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
             height: 56.0,
             child: InkWell(
               onTap: () {
+                //show bottom sheet
                 showBottomSheet(
                   backgroundColor: Colors.white,
                   elevation: 0.0,

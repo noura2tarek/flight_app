@@ -5,5 +5,5 @@ abstract class OnBoardingState {}
 
 class OnBoardingInitialState extends OnBoardingState {}
 class ChangePageState extends OnBoardingState {}
-class OnBoardingNextState extends OnBoardingState {}
 class OnBoardingSkipState extends OnBoardingState {}
+class OnBoardingNextState extends OnBoardingState {}

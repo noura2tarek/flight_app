@@ -3,11 +3,9 @@ import 'package:flight_app/presentation/core/resources/routes_manager.dart';
 import 'package:flight_app/presentation/core/resources/theme_manager.dart';
 import 'package:flight_app/presentation/screens/enter_data/enter_data_screen.dart';
 import 'package:flight_app/presentation/screens/main_page/screens/main_page_screen.dart';
-import 'package:flight_app/presentation/screens/payment/checkout_screen.dart';
 import 'package:flight_app/presentation/screens/splash/splash_screen.dart';
 import 'package:flight_app/presentation/screens/verify_code/verify_code_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'data/data_source/local/cache_helper.dart';
 
 void main() async {
@@ -47,11 +45,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: theme,
       //initialRoute: AppRoutes.splashRoute,
-      home: PaymentScreen(),
+      home: initial,
       routes: routes,
     );
   }
 }
-
-// do:
-// - add routes manager

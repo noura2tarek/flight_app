@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 //inter bold style 25
 TextStyle myTextStyle({
   required var color,
-  double size = 17.0,
+  double size = 25.0,
   FontWeight fontWeight = FontWeight.bold,
 }) {
   return TextStyle(
@@ -41,7 +41,7 @@ TextStyle interMedium14 = const TextStyle(
 );
 
 //inter semi bold 17
-TextStyle interSemiBold16({required var color}) {
+TextStyle interSemiBold17({required var color}) {
   return TextStyle(
     fontWeight: FontWeight.w600,
     color: color,
