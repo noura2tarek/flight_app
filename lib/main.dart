@@ -2,10 +2,12 @@ import 'package:flight_app/presentation/core/managers/app_strings.dart';
 import 'package:flight_app/presentation/core/resources/routes_manager.dart';
 import 'package:flight_app/presentation/core/resources/theme_manager.dart';
 import 'package:flight_app/presentation/screens/enter_data/enter_data_screen.dart';
+import 'package:flight_app/presentation/screens/enter_data/widgets/phone_form_field.dart';
 import 'package:flight_app/presentation/screens/main_page/screens/main_page_screen.dart';
 import 'package:flight_app/presentation/screens/splash/splash_screen.dart';
 import 'package:flight_app/presentation/screens/verify_code/verify_code_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:phone_form_field/phone_form_field.dart';
 import 'data/data_source/local/cache_helper.dart';
 
 void main() async {
@@ -43,9 +45,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: AppStringsEn.appTitle,
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: PhoneFieldLocalization.delegates,
+      supportedLocales: PhoneFieldView.supportedLocales,
+      locale: const Locale('en'),
       theme: theme,
       //initialRoute: AppRoutes.splashRoute,
-      home: initial,
+      home: EnterData(),
       routes: routes,
     );
   }
