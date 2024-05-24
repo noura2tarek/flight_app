@@ -33,7 +33,7 @@ class PhoneFieldView extends StatelessWidget {
   final bool isCountryButtonPersistant;
   final bool mobileOnly;
   final Locale locale;
-
+  final dynamic Function(PhoneNumber)? onChange  ;
   const PhoneFieldView({
     Key? key,
     required this.controller,
@@ -44,6 +44,7 @@ class PhoneFieldView extends StatelessWidget {
     required this.isCountryButtonPersistant,
     required this.mobileOnly,
     required this.locale,
+    required this.onChange,
   }) : super(key: key);
 
   PhoneNumberInputValidator? _getValidator(BuildContext context) {
@@ -99,7 +100,7 @@ class PhoneFieldView extends StatelessWidget {
                 // ignore: avoid_print
                 onSaved: (p) => print('saved $p'),
                 // ignore: avoid_print
-                onChanged: (p) => print('changed $p'),
+                onChanged: onChange,
               ),
             );
           },
