@@ -17,5 +17,8 @@ class AppImages{
   static var food = 'assets/images/food.png';
   static var successPayment = 'assets/images/success.png';
   static var defaultPhoto = 'assets/images/defaultPhoto.jpg';
+  static var refundIcon = 'assets/images/refund.png';
+  static var windIcon = 'assets/images/Wind.png';
+  static var clapping = 'assets/images/HandsClapping.png';
 
 }

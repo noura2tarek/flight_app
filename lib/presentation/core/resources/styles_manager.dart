@@ -40,6 +40,14 @@ TextStyle interMedium14 = const TextStyle(
   fontFamily: 'Inter',
 );
 
+//inter semi bold 16
+TextStyle interSemiBold16({Color color = const Color(0xff667085)}) =>   TextStyle(
+  fontWeight: FontWeight.w600,
+  color: color,
+  fontSize: 16.0,
+  fontFamily: 'Inter',
+);
+
 //inter semi bold 17
 TextStyle interSemiBold17({required var color}) {
   return TextStyle(
@@ -51,10 +59,18 @@ TextStyle interSemiBold17({required var color}) {
 }
 
 //inter regular 14
-TextStyle interRegular14 = const TextStyle(
+TextStyle interRegular14({Color color = const Color(0xff1D2939)}) =>  TextStyle(
   fontWeight: FontWeight.w400,
-  color: Color(0xff1D2939),
+  color: color,
   fontSize: 14.0,
+  fontFamily: 'Inter',
+);
+
+//inter regular 14
+TextStyle interRegular12({Color color = const Color(0xff667085)}) =>  TextStyle(
+  fontWeight: FontWeight.w400,
+  color: color,
+  fontSize: 12.0,
   fontFamily: 'Inter',
 );
 

@@ -8,5 +8,7 @@ class AppColors {
   static var textColor = const Color(0xff344054);
   static var greyColor = Colors.grey[350];
   static var formFillColor = const Color(0xff1D2939);
+  static var lightPurple = const Color(0xffCABDFC);
   static var blueColor = const Color(0xff657FF3); //on boarding
+  static var white = const Color(0xffffffff); //on boarding
 }

@@ -1,7 +1,5 @@
-import 'package:bloc/bloc.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
 
 part 'main_page_controller_state.dart';
 
@@ -16,7 +14,7 @@ class MainPageControllerCubit extends Cubit<MainPageControllerState> {
 
   int currentIndex = 0;
 
-  void onTap(int value) {
+void onTap(int value) {
     currentIndex = value;
     emit(MainPageChangeIndex());
   }

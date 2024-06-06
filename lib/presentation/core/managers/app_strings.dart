@@ -24,4 +24,5 @@ class AppStringsEn{
   static String prepare = 'Set your bag for your flight.';
   static String whereFindAirplaneTour = 'Where to find an airplane tour?';
   static String inCaseOfCancellation = 'In case of flight cancellation the money will be refunded';
+  static String notifications = 'Notifications';
 }

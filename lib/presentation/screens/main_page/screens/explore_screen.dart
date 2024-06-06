@@ -228,11 +228,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       ),
                       Text(
                         date ?? 'date',
-                        style: const TextStyle(
-                          color: Color(0xff98A2B3),
-                          fontFamily: 'Inter',
-                          fontSize: 16.0,
-                        ),
+                        style: interSemiBold16(color: const Color(0xff98A2B3)),
                       ),
                     ],
                   ),

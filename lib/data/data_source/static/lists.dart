@@ -6,7 +6,7 @@ import '../../../presentation/core/managers/app_images.dart';
 import '../../../presentation/screens/main_page/screens/explore_screen.dart';
 import '../../../presentation/screens/main_page/screens/favourites_screen.dart';
 import '../../../presentation/screens/main_page/screens/flights_screen.dart';
-import '../../../presentation/screens/main_page/screens/profile_screen.dart';
+import '../../../presentation/screens/main_page/screens/profile/profile_screen.dart';
 
 
 final List<Widget> screens = [

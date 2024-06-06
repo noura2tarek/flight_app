@@ -1,12 +1,12 @@
 import 'package:flight_app/presentation/core/managers/app_images.dart';
+import 'package:flight_app/presentation/core/managers/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../controllers/profile_screen_controller/profile_screen_cubit.dart';
-import '../../../core/resources/color_manager.dart';
-import '../../../core/resources/routes_manager.dart';
-import '../../../core/resources/styles_manager.dart';
+import '../../../../../controllers/profile_screen_controller/profile_screen_cubit.dart';
+import '../../../../core/resources/color_manager.dart';
+import '../../../../core/resources/routes_manager.dart';
+import '../../../../core/resources/styles_manager.dart';
 
-//make it with cubit
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
@@ -124,7 +124,9 @@ class ProfileScreen extends StatelessWidget {
                           /* ---------- Notifications  ---------- */
                           ListTile(
                             splashColor: Colors.white70,
-                            onTap: () {},
+                            onTap: () {
+                              cubit.navToNotifications(context);
+                            },
                             tileColor: const Color(0xfff2f2f7).withOpacity(0.5),
                             shape: const OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(8.0)),
@@ -134,7 +136,7 @@ class ProfileScreen extends StatelessWidget {
                               Icons.notifications_none_outlined,
                               color: AppColors.primaryColor,
                             ),
-                            title: Text('Notifications', style: interRegular14,),
+                            title: Text(AppStringsEn.notifications, style: interRegular14(),),
                           ),
                           const SizedBox(height: 16.0,),
                           /* ---------- tickets & cards  ---------- */
@@ -161,7 +163,7 @@ class ProfileScreen extends StatelessWidget {
                                        Icons.airplane_ticket_outlined,
                                        color: AppColors.primaryColor,
                                      ),
-                                     title: Text('My tickets', style: interRegular14,),
+                                     title: Text('My tickets', style: interRegular14(),),
                                    ),
                                    /* ---------- cards list tile  ---------- */
                                    ListTile(
@@ -178,7 +180,7 @@ class ProfileScreen extends StatelessWidget {
                                        Icons.credit_card,
                                        color: AppColors.primaryColor,
                                      ),
-                                     title: Text('My Cards', style: interRegular14,),
+                                     title: Text('My Cards', style: interRegular14(),),
                                    ),
 
                                  ],
@@ -210,7 +212,7 @@ class ProfileScreen extends StatelessWidget {
                                       Icons.comment_bank_outlined,
                                       color: AppColors.primaryColor,
                                     ),
-                                    title: Text('Customer Service', style: interRegular14,),
+                                    title: Text('Customer Service', style: interRegular14(),),
                                   ),
                                   /* ---------- settings tile  ---------- */
                                   ListTile(
@@ -224,7 +226,7 @@ class ProfileScreen extends StatelessWidget {
                                       Icons.settings_outlined,
                                       color: AppColors.primaryColor,
                                     ),
-                                    title: Text('Settings', style: interRegular14,),
+                                    title: Text('Settings', style: interRegular14(),),
                                   ),
 
                                 ],
@@ -245,7 +247,7 @@ class ProfileScreen extends StatelessWidget {
                               Icons.cancel_outlined,
                               color: AppColors.primaryColor,
                             ),
-                            title: Text('Log out', style: interRegular14,),
+                            title: Text('Log out', style: interRegular14(),),
                           ),
                         ],
                       ),

@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
       locale: const Locale('en'),
       theme: theme,
       //initialRoute: AppRoutes.splashRoute,
-      home: EnterData(),
+      home: initial,
       routes: routes,
     );
   }
